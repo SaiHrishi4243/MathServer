@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                align-content: center;
+            }
+            div
+            {
+                width:240px; height:250px; border:solid;background-color: azure;align-content: center;margin-left: auto;margin-right: auto;
+            }
+        </style>
+    </head>
+    <body align="center" style="background:linear-gradient(to top right,red,blue)">
+        <div>
+            <br>
+            <font size="5px">Calculate Power</font>
+            <br>
+            <br>
+            <input type="text" placeholder="Enter Intensity" id="v1">
+            <br>
+            <br>
+            <input type="text" placeholder="Enter Resistance" id="v2">
+            <br>
+            <br>
+            <button onclick="cal()">Calculate</button>
+            <br>
+            <br>
+            <output id="out"></output>
+
+        </div>
+        <script>
+            function cal()
+            {
+                var int=Number(document.getElementById("v1").value);
+                var res=Number(document.getElementById("v2").value);
+
+                var pow=int*int*res
+                document.getElementById("out").innerText="Power = "+ pow +" W";
+
+            }
+        </script>
+    </body>
+</html>
