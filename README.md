@@ -1,5 +1,5 @@
 # Ex.05 Design a Website for Server Side Processing
-## Date:
+## Date: 26-11-2024
 
 ## AIM:
  To design a website to calculate the power of a lamp filament in an incandescent bulb in the server side. 
@@ -33,12 +33,60 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 
+```
+<html>
+    <head>
+        <style>
+            body
+            {
+                align-content: center;
+            }
+            div
+            {
+                width:240px; height:250px; border:solid;background-color: azure;align-content: center;margin-left: auto;margin-right: auto;
+            }
+        </style>
+    </head>
+    <body align="center" style="background:linear-gradient(to top right,red,blue)">
+        <div>
+            <br>
+            <font size="5px">Calculate Power</font>
+            <br>
+            <br>
+            <input type="text" placeholder="Enter Intensity" id="v1">
+            <br>
+            <br>
+            <input type="text" placeholder="Enter Resistance" id="v2">
+            <br>
+            <br>
+            <button onclick="cal()">Calculate</button>
+            <br>
+            <br>
+            <output id="out"></output>
+
+        </div>
+        <script>
+            function cal()
+            {
+                var int=Number(document.getElementById("v1").value);
+                var res=Number(document.getElementById("v2").value);
+
+                var pow=int*int*res
+                document.getElementById("out").innerText="Power = "+ pow +" W";
+
+            }
+        </script>
+    </body>
+</html>
+```
 
 ## SERVER SIDE PROCESSING:
 
+![alt text](<Screenshot 2024-11-26 011610.png>)
 
 ## HOMEPAGE:
 
+![alt text](<Screenshot 2024-11-26 005938.png>)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
